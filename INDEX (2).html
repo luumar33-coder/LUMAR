@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lu Mar Bienestar & belleza</title>
+  <style>
+    :root{--lila:#C8A2E0;--lila-dark:#A982D1;--button-blue:#007bff;--button-yellow:#f0c419;--insta-from:#feda75;--insta-to:#d62976}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,var(--lila) 0%, #EDE0F8 100%);display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:100%;max-width:740px;background:rgba(255,255,255,0.08);backdrop-filter:blur(6px);border-radius:18px;padding:22px;border:2px solid rgba(255,255,255,0.08);box-shadow:0 8px 30px rgba(0,0,0,0.12)}
+    h1{margin:0 0 8px;font-size:34px;color:#2b0b3a;text-transform:capitalize;letter-spacing:0.6px;text-align:center}
+    .subtitle{color:#3a0f47;text-align:center;margin-bottom:18px;font-weight:600}
+    .contact{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:16px}
+    .chip{background:rgba(255,255,255,0.12);padding:10px 14px;border-radius:999px;font-weight:600}
+    .buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}
+    .btn{padding:12px 16px;border-radius:10px;border:none;font-weight:700;cursor:pointer;min-width:160px}
+    .whatsapp{background:var(--button-blue);color:white}
+    .facebook{background:var(--button-yellow);color:#2b2b2b}
+    .insta{background:linear-gradient(45deg,var(--insta-from),var(--insta-to));color:white}
+    .info{background:rgba(255,255,255,0.06);padding:14px;border-radius:12px;color:#2b0b3a}
+    .tips{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+    .tip{background:rgba(255,255,255,0.03);padding:8px;border-radius:8px;font-size:14px}
+    footer{margin-top:14px;text-align:center;color:#2b0b3a;font-size:14px}
+    .small{font-size:13px;color:#41123f}
+    .capy{display:flex;align-items:center;gap:10px}
+    img.capy-img{width:90px;height:60px;object-fit:cover;border-radius:8px}
+    @media (max-width:520px){h1{font-size:28px}.btn{min-width:140px}}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Lu Mar Bienestar & belleza</h1>
+    <div class="subtitle">Reiki · Masajes · Depilación definitiva · Productos Arbell</div>
+
+    <div class="contact">
+      <div class="chip">📱 3704296073</div>
+      <div class="chip">✉️ luumar33@gmail.com</div>
+      <div class="chip">📸 @arbell_fsa</div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn whatsapp" onclick="openWhats()">Ir al WhatsApp 💬</button>
+      <a class="btn facebook" href="https://www.facebook.com/share/19z5q1FB3U/" target="_blank" rel="noopener">Ir al Facebook 🔶</a>
+      <a class="btn insta" href="https://www.instagram.com/arbell_fsa" target="_blank" rel="noopener">Ir al Instagram 📷</a>
+      <button class="btn" style="background:linear-gradient(90deg,#ffffff00,#ffffff00);border:2px solid rgba(43,11,58,0.12)" onclick="showBenefits()">Beneficios & 20 tips 😄</button>
+      <button class="btn" style="background:#ffe1f9;color:#2b0b3a" onclick="sayGoodbye()">Salir ❌</button>
+    </div>
+
+    <div id="benefits" class="info" style="display:none">
+      <strong>Beneficios rápidos</strong>
+      <ul>
+        <li>👐 Masajes: alivio del estrés, mejor circulación, sueño reparador.</li>
+        <li>✨ Reiki: equilibrio energético, apoyo emocional, sensación de calma.</li>
+        <li>🔒 Depilación definitiva: piel suave, menos tiempo en mantenimiento y confianza.</li>
+        <li>🧴 Productos Arbell: calidad profesional para uso diario y resultados visibles.</li>
+      </ul>
+      <div class="small">Tips divertidos y prácticos para usar, vender y compartir (20):</div>
+      <div class="tips">
+        <div class="tip">1. Regala una muestra pequeña y sorprende. 🎁</div>
+        <div class="tip">2. Usa foto antes/después con buena luz. 📸</div>
+        <div class="tip">3. Haz mini-videos de 15s mostrando textura del producto. 🎥</div>
+        <div class="tip">4. Ofrece pack 2x1 para mamás ocupadas. 🤱</div>
+        <div class="tip">5. Crea un reto "7 días de calma" con masajes cortos. ⏱️</div>
+        <div class="tip">6. Cuenta historias reales de clientas (con permiso). 💬</div>
+        <div class="tip">7. Comparte consejos post-depilación para cuidar la piel. 🧴</div>
+        <div class="tip">8. Usa humor: "menos pelusa, más besos". 😜</div>
+        <div class="tip">9. Promociona la libertad de horarios para quienes venden. 🕒</div>
+        <div class="tip">10. Publica testimonios en stories y guárdalos. ⭐</div>
+        <div class="tip">11. Haz packs especiales para eventos (bautismos, casamientos). 🎉</div>
+        <div class="tip">12. Ofrece mini-sesión de reiki como bono por compra. ✨</div>
+        <div class="tip">13. Enseña cómo aplicar productos con reels rápidos. 🔄</div>
+        <div class="tip">14. Usa hashtags localizados: #Formosa #Arbell #LuMar. 📍</div>
+        <div class="tip">15. Organiza ferias locales y lleva muestras. 🏪</div>
+        <div class="tip">16. Ofrece descuentos por recomendación. 🤝</div>
+        <div class="tip">17. Crea un GIF divertido para tus mensajes. 🖼️</div>
+        <div class="tip">18. Muestra "detrás de escena" preparando pedidos. 📦</div>
+        <div class="tip">19. Combina servicios: masaje + producto a precio especial. 💆‍♀️</div>
+        <div class="tip">20. Pide reseñas y responde con emojis divertidos. 📝</div>
+      </div>
+    </div>
+
+    <div id="capy" class="info" style="display:none;margin-top:12px">
+      <div class="capy">
+        <img class="capy-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Capybara_at_Quinta_San_Marino%2C_Buenos_Aires%2C_Argentina.jpg" alt="capibara">
+        <div>
+          <strong>¡Capibara alerta! 🐾</strong>
+          <p class="small">"No te vayas todavía: ¿Querés un tip express?" — dice la capibara. 😆</p>
+          <button class="btn whatsapp" onclick="openWhats('Hola Lu! Me hablo la capibara y quiero info 😄')">Enviar a mi WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="small">Diseño móvil listo para guardar en tu celular. Guardalo como "Agregar a pantalla de inicio" para abrir como app.</div>
+    </footer>
+  </div>
+
+  <script>
+    function openWhats(message){
+      const msg = encodeURIComponent(message || 'Hola Lu! Quiero info');
+      const phone = '3704296073';
+      const url = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + msg;
+      window.open(url, '_blank');
+    }
+
+    function showBenefits(){
+      document.getElementById('benefits').style.display = 'block';
+      window.scrollTo({top: document.getElementById('benefits').offsetTop - 20, behavior:'smooth'});
+    }
+
+    function sayGoodbye(){
+      document.getElementById('capy').style.display = 'block';
+      window.scrollTo({top: document.getElementById('capy').offsetTop - 20, behavior:'smooth'});
+    }
+  </script>
+</body>
+</html>
